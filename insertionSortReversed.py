@@ -1,12 +1,32 @@
 
 #!/usr/bin/env python3
+"""Insertion sort that orders numbers in reverse (descending) order.
+
+Provides:
+- insertion_sort_reversed(arr): sorts the list in-place (descending) and returns it.
+
+The algorithm is the standard insertion sort modified so larger elements "bubble"
+to the front, producing a descending order.
+"""
 
 from typing import List, Optional
 
 
 
+
 def insertion_sort_reversed(arr: Optional[List[float]]) -> Optional[List[float]]:
-	# Sorts arr in-place in descending order using insertion sort.
+	"""Sorts arr in-place in descending order using insertion sort.
+
+	Args:
+		arr: list of comparable numbers (or None).
+
+	Returns:
+		The same list object sorted in-place in descending order, or None if input is None.
+
+	Notes:
+		- Stable (preserves relative order of equal elements).
+		- Time complexity O(n^2) worst-case, in-place.
+	"""
 	if arr is None:
 		return None
 
